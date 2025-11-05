@@ -1,0 +1,43 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data files (если не нужны в репо)
+*.csv
+
+# OS files
+.DS_Store
+
+# PyCharm / IDE
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# Byte-compiled
+*.pyo
+*.pyd
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Environment files
+.env
+*.env
+
+# Reports / temporary outputs
+output/
+tmp/
