@@ -12,6 +12,6 @@ df['date_added'] = convert_date(df['date_added'])
 df['duration_seasons'] = convert_duration(df['duration'], duration='seasons')
 df['duration_min'] = convert_duration(df['duration'], duration='min')
 df = df.drop(columns='duration')
-print(df[['show_id', 'duration_seasons', 'duration_min']].head(15))
+# print(df[['show_id', 'duration_seasons', 'duration_min']].head(15))
 
 # LOAD - Загружаем данные
