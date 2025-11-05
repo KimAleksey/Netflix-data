@@ -1,5 +1,6 @@
 from extract_data import extracted_data
 from transform_data import fill_na_with_unknown, convert_date, convert_duration
+from load_data import create_table
 
 # EXTRACT - Получаем данные датасета
 df = extracted_data
@@ -14,4 +15,8 @@ df['duration_min'] = convert_duration(df['duration'], duration='min')
 df = df.drop(columns='duration')
 # print(df[['show_id', 'duration_seasons', 'duration_min']].head(15))
 
+# print(df.columns)
+# print(df.dtypes)
+
 # LOAD - Загружаем данные
+create_table()
