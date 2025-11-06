@@ -65,3 +65,23 @@ def convert_duration(s: Series, duration='seasons') -> Series:
 
     s = s.apply(func=parse)
     return s
+
+
+def replace_semi_column(df: DataFrame) -> DataFrame:
+    """
+    Убираем символ ;, чтобы в дальнейшем корретно парсить строку на столбцы,
+    используя в качестве разделителя ;
+    """
+    if df.empty:
+        return df
+    return df.replace(';', ',', regex=True)
+
+
+def drop_key_duplicates(df: DataFrame) -> DataFrame:
+    """
+    Удаление дубликатов по ключу show_id,
+    чтобы не возникало ошибок при вставке
+    """
+    if df.empty:
+        return df
+    return df.drop_duplicates(subset=['show_id'])
