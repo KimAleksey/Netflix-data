@@ -85,3 +85,14 @@ def drop_key_duplicates(df: DataFrame) -> DataFrame:
     if df.empty:
         return df
     return df.drop_duplicates(subset=['show_id'])
+
+
+def transform_data(df: DataFrame) -> DataFrame:
+    df = fill_na_with_unknown(df)
+    df['date_added'] = convert_date(df['date_added'])
+    df['duration_seasons'] = convert_duration(df['duration'], duration='seasons')
+    df['duration_min'] = convert_duration(df['duration'], duration='min')
+    df = df.drop(columns='duration')
+    df = replace_semi_column(df)
+    df = drop_key_duplicates(df)
+    return df

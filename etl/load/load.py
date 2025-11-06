@@ -60,7 +60,7 @@ def create_table():
     return True
 
 
-def load_data(df: DataFrame):
+def load_data_to_postgres(df: DataFrame):
     # параметры подключения
     conn = connect(
         dbname=f'{DATABASE_NAME}',
@@ -109,3 +109,8 @@ def load_data(df: DataFrame):
     conn.close()
 
     print("Данные успешно загружены в PostgreSQL!")
+
+
+def load_data(df: DataFrame):
+    create_table()
+    load_data_to_postgres(df)
