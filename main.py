@@ -1,6 +1,6 @@
-from etl.extract.extract import extracted_data
-from etl.transform.transform import transform_data
-from etl.load.load import load_data
+from etl.extract import extracted_data
+from etl.transform import transform_data
+from etl.load import load_data
 
 
 def main():
