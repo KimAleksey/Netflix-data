@@ -41,3 +41,5 @@ dist/
 # Reports / temporary outputs
 output/
 tmp/
+
+data/netflix_titles.csv
