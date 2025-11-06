@@ -25,3 +25,11 @@ def get_data() -> DataFrame:
         print(f"Ошибка: файл пустой")
 
     return None
+
+
+try:
+    extracted_data = get_data()
+except FileNotFoundError:
+    print("Ошибка: файл не найден по пути")
+except pd_errors.EmptyDataError:
+    print("Ошибка: файл пустой")

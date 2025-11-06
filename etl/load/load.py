@@ -7,6 +7,7 @@ from csv import QUOTE_NONNUMERIC
 
 # Данные подключения
 load_dotenv()
+
 DATABASE_NAME = getenv('DATABASE_NAME')
 USER_NAME = getenv('USER_NAME')
 PASSWORD = getenv('PASSWORD')
